@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "PxzaoLOubm1/XzAmm95Rlhfj8YQOYusxsZcmuxDjfRC/4EuDACDZ4SukhNAFi8geuAuTYm16/jpE9U5xUCfBDA==",
+  "success": true,
+  "projectFilePath": "E:\\Programming\\Project\\RetentionUnit\\RetentionUnit\\RetentionUnit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\niara\\.nuget\\packages\\bootstrap\\4.4.1\\bootstrap.4.4.1.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\jquery\\3.5.0.1\\jquery.3.5.0.1.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.0\\microsoft.extensions.configuration.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.0\\microsoft.extensions.configuration.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.0\\microsoft.extensions.configuration.binder.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.0\\microsoft.extensions.dependencyinjection.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.logging\\3.0.0\\microsoft.extensions.logging.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.0\\microsoft.extensions.logging.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\nlog\\4.7.0\\nlog.4.7.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\nlog.config\\4.7.0\\nlog.config.4.7.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\nlog.extensions.logging\\1.6.2\\nlog.extensions.logging.1.6.2.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\nlog.schema\\4.7.0\\nlog.schema.4.7.0.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\nlog.web.aspnetcore\\4.9.2\\nlog.web.aspnetcore.4.9.2.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\oracle.manageddataaccess.core\\2.19.70\\oracle.manageddataaccess.core.2.19.70.nupkg.sha512",
+    "C:\\Users\\niara\\.nuget\\packages\\popper.js\\1.16.0\\popper.js.1.16.0.nupkg.sha512"
+  ],
+  "logs": []
+}
