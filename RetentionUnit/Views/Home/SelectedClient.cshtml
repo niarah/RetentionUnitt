@@ -1,0 +1,88 @@
+﻿@model RetentionUnit.Models.Client
+<div class="row">
+    <div class="col-md-12 mb-1">
+        <h4 class="mb-3">Данные по клиенту</h4>
+        <div class="row">
+            <div class="col-md-8 mb-1">
+                <label>ФИО Клиента</label>
+                <input type="text" class="form-control" name="FullName" value="@Model.FullName" disabled>
+            </div>
+            <div class="col-md-4 mb-1">
+                <label>IBSO_ID</label>
+                <input type="text" class="form-control" name="Ibso" value="@Model.Ibso" disabled>
+            </div>
+            <div class="col-md-4 mb-2">
+                <label>Дата рождения</label>
+                <input type="text" class="form-control" name="BirthDate" value="@Model.BirthDate" data-inputmask="'mask': '99.99.9999'" disabled>
+            </div>
+            <div class="col-md-4 mb-2">
+                <label f>Номер мобильного телефона</label>
+                <input type="text" class="form-control" name="Phone" value="@Model.Phone" data-inputmask="'mask': '+7(999)999-99-99'" disabled>
+            </div>
+            <div class="col-md-2 mb-2">
+                <label>Клиент в СТОП Листе</label>
+                <input type="text" class="form-control" name="StopList" value="@Model.StopList" disabled>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Причина Оттока</label>
+                <input type="text" class="form-control" name="OttokReason" value="@Model.OttokReason" disabled>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Описание</label>
+                <input type="text" class="form-control" name="OttokDesc" value="@Model.OttokDesc" disabled>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="col-md-12 mb-2">
+        <h4>Необходимо пройти опрос</h4>
+        <div id="QuestionField">
+
+        </div>
+        <div id="AnswerField" class="row">
+            <div class="col-md-3" id="AnswerRadio"></div><div id="AnswerText" class="col-md-9"></div>
+        </div>
+        <button class="btn btn-primary d-none" id="SelectQuestion" type="button">ВЫБРАТЬ</button>
+        <button class="btn btn-primary" id="StartQuestions" type="button">НАЧАТЬ</button>
+    </div>
+</div>
+<script>
+    var quest;
+    (function () {
+        'use strict';
+
+        var question = {
+            appendQuestion: function (div, text) {
+                div.append("<div class='alert alert-primary'><p>" + text + "</p></div>");
+            },
+            appendAnswer: function (div, text, id) {
+                //div.append("<p><div class='alert alert-warning'><input type='radio' id='Answer_" + id + "' name='AnswerRadio' value=" + id + "'><label for='Answer_" + id + "'>" + text + "</label></p></div>");
+                div.find('#AnswerRadio').append("<div class='alert alert-warning' ><p><label><input type='radio' id='Answer_" + id + "' name='AnswerRadio' value=" + id + "' /></label></p></div>");
+                div.find('#AnswerText').append("<div class='alert alert-warning'><p><label for='Answer_" + id + "'>" + text + "</label></p></div>");
+            },
+            clearQuestionModel: function () {
+                $("#QuestionField").empty();
+                $("#AnswerField").empty();
+            },
+            questionSelected: function (params) {
+                $.post("/Home/GetQuestion", { qId: params }, function (data) {
+                    quest = data;
+                    question.appendQuestion($("#QuestionField"), data.questionText);
+                    $.each(data.answers, function (index, value) {
+                        question.appendAnswer($("#AnswerField"), value.answerText, value.answerId);
+                    });
+                });
+            },
+            test: function () {
+                console.log("testtesttest");
+            }
+        }
+        $("#StartQuestions").on('click', function () {
+            console.log("startquestion");
+            $("#StartQuestions").addClass("d-none");
+            $("#SelectQuestion").removeClass("d-none");
+            question.questionSelected(1);
+        });
+    })();
+</script>

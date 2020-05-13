@@ -16,8 +16,6 @@ E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Release\netcoreapp3.1\NLo
 E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Release\netcoreapp3.1\NLog.Web.AspNetCore.dll
 E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Release\netcoreapp3.1\Oracle.ManagedDataAccess.dll
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.csprojAssemblyReference.cache
-E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.csproj.CoreCompileInputs.cache
-E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.MvcApplicationPartsAssemblyInfo.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.RazorAssemblyInfo.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.RazorAssemblyInfo.cs
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.AssemblyInfoInputs.cache
@@ -41,3 +39,6 @@ E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\sta
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.dll
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.pdb
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.genruntimeconfig.cache
+E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.csproj.CoreCompileInputs.cache
+E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Release\netcoreapp3.1\RetentionUnit.MvcApplicationPartsAssemblyInfo.cache
+E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Release\netcoreapp3.1\libman.json

@@ -31,6 +31,7 @@
           "Oracle.ManagedDataAccess.Core": "2.19.70",
           "bootstrap": "4.4.1",
           "jQuery": "3.5.0.1",
+          "jQuery.InputMask": "5.0.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -328,6 +329,7 @@
         }
       },
       "jQuery/3.5.0.1": {},
+      "jQuery.InputMask/5.0.2": {},
       "Microsoft.Extensions.Configuration/3.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.0.0"
@@ -2149,6 +2151,13 @@
       "sha512": "sha512-nonOMyjbk06vF05LECisH6HY2dZlKTAAXZ2UdvumY8pWMsWPo949G2KLvdyNWRMWL1Nv9vrYb1IEUVN+U+nt/Q==",
       "path": "jquery/3.5.0.1",
       "hashPath": "jquery.3.5.0.1.nupkg.sha512"
+    },
+    "jQuery.InputMask/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yu+Xgd4mcf4t4olLL+J7+kTBUqkJ9DEB/BNt36TlBHucrAxvtIHvj6odLzwJt42+w36XhDtW+bf1d0HrID1LcA==",
+      "path": "jquery.inputmask/5.0.2",
+      "hashPath": "jquery.inputmask.5.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.0.0": {
       "type": "package",

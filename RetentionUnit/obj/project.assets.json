@@ -12,6 +12,9 @@
       "jQuery/3.5.0.1": {
         "type": "package"
       },
+      "jQuery.InputMask/5.0.2": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -281,6 +284,23 @@
         "Tools/uninstall.ps1",
         "jquery.3.5.0.1.nupkg.sha512",
         "jquery.nuspec"
+      ]
+    },
+    "jQuery.InputMask/5.0.2": {
+      "sha512": "Yu+Xgd4mcf4t4olLL+J7+kTBUqkJ9DEB/BNt36TlBHucrAxvtIHvj6odLzwJt42+w36XhDtW+bf1d0HrID1LcA==",
+      "type": "package",
+      "path": "jquery.inputmask/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "content/Scripts/inputmask/bindings/inputmask.binding.js",
+        "content/Scripts/inputmask/inputmask.js",
+        "content/Scripts/inputmask/inputmask.min.js",
+        "content/Scripts/inputmask/jquery.inputmask.js",
+        "content/Scripts/inputmask/jquery.inputmask.min.js",
+        "jquery.inputmask.5.0.2.nupkg.sha512",
+        "jquery.inputmask.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/3.0.0": {
@@ -743,7 +763,8 @@
       "Newtonsoft.Json >= 12.0.3",
       "Oracle.ManagedDataAccess.Core >= 2.19.70",
       "bootstrap >= 4.4.1",
-      "jQuery >= 3.5.0.1"
+      "jQuery >= 3.5.0.1",
+      "jQuery.InputMask >= 5.0.2"
     ]
   },
   "packageFolders": {
@@ -810,6 +831,10 @@
           "jQuery": {
             "target": "Package",
             "version": "[3.5.0.1, )"
+          },
+          "jQuery.InputMask": {
+            "target": "Package",
+            "version": "[5.0.2, )"
           }
         },
         "imports": [

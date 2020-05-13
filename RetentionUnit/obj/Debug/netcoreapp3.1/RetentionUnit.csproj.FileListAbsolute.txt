@@ -10,7 +10,6 @@ E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Reten
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.TagHelpers.output.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.RazorCoreGenerate.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -41,3 +40,5 @@ E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Debug\netcoreapp3.1\Newto
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.csproj.CoreCompileInputs.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.MvcApplicationPartsAssemblyInfo.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Debug\netcoreapp3.1\NLog.config
+E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Debug\netcoreapp3.1\libman.json
+E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Home\SelectedClient.cshtml.g.cs
