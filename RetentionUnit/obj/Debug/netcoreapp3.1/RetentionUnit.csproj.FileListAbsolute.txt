@@ -114,3 +114,4 @@ E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Debug\netcoreapp3.1\zh-Ha
 E:\Programming\Project\RetentionUnit\RetentionUnit\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.csproj.CoreCompileInputs.cache
 E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\RetentionUnit.MvcApplicationPartsAssemblyInfo.cache
+E:\Programming\Project\RetentionUnit\RetentionUnit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\SaveResponse.cshtml.g.cs
