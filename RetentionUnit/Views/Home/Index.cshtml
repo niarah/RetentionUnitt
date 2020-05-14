@@ -52,22 +52,50 @@
                     <h4 class="mb-3">Найденные клиенты</h4>
                     <div class="panel panel-info">
                         <form class="">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <div class="col-md-1" id="clientRadio">
+                            <h6 class="alert alert-info">Фильтр по параметрам</h6>
+                            <div class="row">
+                                <div class="dropdown col-md-3 mb-1">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuPhone" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Мобильный
+                                    </button>
+                                    <div class="dropdown-menu" id="dropMobile" aria-labelledby="dropdownMenuPhone">
                                     </div>
-                                    <div class="col-md-3" id="clientFIO">
+                                </div>
+                                <div class="dropdown col-md-3 mb-1">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuPassport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Паспорт
+                                    </button>
+                                    <div class="dropdown-menu" id="dropPassport" aria-labelledby="dropdownMenuPassport">
                                     </div>
-                                    <div class="col-md-2" id="clientDate">
+                                </div>
+                                <div class="dropdown col-md-3 mb-1">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuBirth" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Дата Рождения
+                                    </button>
+                                    <div class="dropdown-menu" id="dropBirth" aria-labelledby="dropdownMenuBirth">
                                     </div>
-                                    <div class="col-md-2" id="clientPhone">
-                                    </div>
-                                    <div class="col-md-2" id="clientPasport">
-                                    </div>
-                                    <div class="col-md-2" id="clientBirthPlace">
+                                </div>
+                                <div class="col-md-3 mb-1">
+                                    <button class="btn btn-info" type="button" id="filterClear">
+                                        Сбросить Фильтр
+                                    </button>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <div class="input-group row col-md-12" id="foundedClients" style="margin-left:5px; overflow-y: scroll; height:250px;">
+                                    <div class='clientsRows row col-md-12 alert alert-warning'>
+                                        <div class='col-md-1'>Выбор</div>
+                                        <div class='col-md-3'>ФИО</div>
+                                        <div class='col-md-2'>ДАТА</div>
+                                        <div class='col-md-2'>МОБИЛЬНИК</div>
+                                        <div class='col-md-2'>ПАСПОРТ</div>
+                                        <div class='col-md-2'>ГОРОД</div>
                                     </div>
                                 </div>
                             </div>
+                            <br />
+                            <br />
                             <button class="btn btn-primary" id="selectClient" type="button">ВЫБРАТЬ</button>
                         </form>
                     </div>
@@ -76,21 +104,97 @@
         </div>
     </div>
 </div>
+<p><div></div></p>
 <script>
     var test;
     var test2;
+    var test3;
+    var test4;
+    var test5;
+
     (function () {
         'use strict';
         window.addEventListener('load', function () {
-
+            //$("#span.serMob").on('click', function () {
+            //    console.log("startquestion");
+            //    $("#StartQuestions").addClass("d-none");
+            //    $("#SelectQuestion").removeClass("d-none");
+            //    question.questionSelected(1);
+            //});
+            $("input.serMob").on('click', function () {
+                console.log('tsetM');
+                let searchName = this.text();
+                $(".clientsRows").removeClass('d-none')
+                $.each($(".SclMob"), function (index, value) {
+                    if (searchName != value.text()) {
+                        value.parent.parent.addClass('d-none');
+                    }
+                });
+            });
+            $("input.serPas").on('click', function () {
+                console.log('tsetP');
+                let searchName = this.text();
+                console.log(searchName);
+                $(".clientsRows").removeClass('d-none')
+                $.each($(".SclPas"), function (index, value) {
+                    console.log(value.text());
+                    if (searchName != value.text()) {
+                        value.parent.parent.addClass('d-none');
+                    }
+                });
+            });
+            $("input.serBir").on('click', function () {
+                console.log('tsetB');
+                let searchName = this.text();
+                $(".clientsRows").removeClass('d-none')
+                $.each($(".SclBir"), function (index, value) {
+                    if (searchName != value.text()) {
+                        value.parent.parent.addClass('d-none');
+                    }
+                });
+            });
             var model = {
+                searchM: [],
+                searchP: [],
+                searchB: [],
                 appendText: function (div, text, index) {
                     div.append("<p class=''><label for='clients_" + index + "'>" + text + "</label></p>");
                 },
                 appendRadio: function (div, text, index) {
                     div.append("<p class=''><label><input type='radio' class='radioClient' name='clients_ibso' value=" + text + " id='clients_" + index + "'></label></p>");
                 },
+                appendClient: function (div, client, index) {
+                    div.append("<div class='clientsRows row col-md-12'><div class='col-md-1'><input type='radio' class='radioClient' name='clients_ibso' value=" + client.ibsoid + " id='clients_" + index + "'></div><div class='col-md-3'><lable for='clients_" + index + "'>" + client.fullName + "</label></div><div class='col-md-2'><lable class='SclBir' for='clients_" + index + "'>" + client.birthDate + "</label></div><div class='col-md-2'><lable class='SclMob' for='clients_" + index + "'>" + client.phone + "</label></div><div class='col-md-2'><lable class='SclPas' for='clients_" + index + "'>" + client.passport + "</label></div><div class='col-md-2'><lable for='clients_" + index + "'>" + client.birthPlace +"</label></div></div>");
+                },
+                appendSearch: function (div, aarray, cl) {
+                    $.each(aarray, function (index, text) {
+                        //div.append("<a class='dropdown-item " + cl + "' href='javascript:void(0)' onClick='console.log('testttttt'); return false;' >" + text + "</a>");
+                        div.append("<input type='button' data-id='" + cl + "' onClick='retention.filterClick($(this))' class='dropdown-item ' value='" + text + "' >");
+                    });
+                },
+                getDistinct: function (arrayy) {
+                    let flags = [], l = arrayy.length, i;
+                    for (i = 0; i < l; i++) {
+                        if (!flags[arrayy[i].phone]) {
+                            flags[arrayy[i].phone] = true;
+                            model.searchM.push(arrayy[i].phone);
+
+                        };
+                        if (!flags[arrayy[i].birthDate]) {
+                            flags[arrayy[i].birthDate] = true;
+                            model.searchB.push(arrayy[i].birthDate);
+
+                        };
+                        if (!flags[arrayy[i].passport]) {
+                            flags[arrayy[i].passport] = true;
+                            model.searchP.push(arrayy[i].passport);
+
+                        };
+                        continue
+                    }
+                },
                 clearText: function () {
+                    $("#clientRadio").empty();
                     $("#clientFIO").empty();
                     $("#clientDate").empty();
                     $("#clientPhone").empty();
@@ -117,6 +221,12 @@
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
                     $("#clientInfo").addClass("d-none");
+                    $("#filterClear").on('click', function () {
+                        console.log('tsetC');
+                        $(".clientsRows").removeClass('d-none');
+                    });
+                    
+
                     // Loop over them and prevent submission
                     if ($("#fullname").val() != '' || $("#ibsoid").val() != '' || $("#phonenumber").val().replace(/[^0-9]/gi, '').length == 11) {
                         $("#fullname").prop('required', false);
@@ -143,15 +253,23 @@
                                 model.clearText();
                                 test2 = data.clients;
                                 if (data.clients.length > 1) {
-                                    console.log("multiply");
+                                    let arr = data.clients;
+                                    model.getDistinct(arr);
+                                    let m = "SclMob";
+                                    let p = "SclPas";
+                                    let b = "SclBir";
+                                    if (model.searchM.length > 0) {
+                                        model.appendSearch($("#dropMobile"), model.searchM, m);
+                                    };
+                                    if (model.searchP.length > 0) {
+                                        model.appendSearch($("#dropPassport"), model.searchP, p);
+                                    };
+                                    if (model.searchB.length > 0) {
+                                        model.appendSearch($("#dropBirth"), model.searchB, b);
+                                    };
                                     $.each(data.clients, function (index, value) {
                                         test = value;
-                                        model.appendRadio($("#clientRadio"), value.ibso, index);
-                                        model.appendText($("#clientFIO"), value.fullName, index);
-                                        model.appendText($("#clientDate"), value.birthDate.slice(0, -9), index);
-                                        model.appendText($("#clientPhone"), value.phone, index);
-                                        model.appendText($("#clientPasport"), value.passport, index);
-                                        model.appendText($("#clientBirthPlace"), value.birthPlace, index);
+                                        model.appendClient($("#foundedClients"), value, index);
                                     });
                                     $("#clients_0").prop('checked', true);
                                 } else {

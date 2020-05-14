@@ -5,6 +5,10 @@
     {
       "library": "inputmask@4.0.9",
       "destination": "wwwroot/lib/inputmask/"
+    },
+    {
+      "library": "moment.js@2.25.3",
+      "destination": "wwwroot/lib/moment.js/"
     }
   ]
 }

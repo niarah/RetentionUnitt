@@ -40,28 +40,56 @@ namespace RetentionUnit.Controllers
         {
             model.BirthPlace = "МОСКВА";
             model.Passport = "12 13 123456";
+            model.BirthDate = DateTime.Today.ToString("d");
+            var model2 = new Client
+            {
+                FullName = model.FullName,
+                Ibso = model.Ibso,
+                BirthDate = DateTime.Today.AddDays(1).ToString("d"),
+                BirthPlace = model.BirthPlace,
+                Passport = "13 12 123456",
+                Phone = "1234567890"
+            };
+            var model3 = new Client
+            {
+                FullName = model.FullName,
+                Ibso = model.Ibso,
+                BirthDate = DateTime.Today.AddDays(3).ToString("d"),
+                BirthPlace = model.BirthPlace,
+                Passport = "15 17 321456",
+                Phone = "5244527890"
+            };
+            var model4 = new Client
+            {
+                FullName = model.FullName,
+                Ibso = model.Ibso,
+                BirthDate = DateTime.Today.AddDays(-2).ToString("d"),
+                BirthPlace = model.BirthPlace,
+                Passport = "25 47 321456",
+                Phone = "5245437890"
+            };
             ClientsCollection clients = new ClientsCollection(model);
             clients.Clients.Add(model);
+            clients.Clients.Add(model3);
+            clients.Clients.Add(model4);
+            clients.Clients.Add(model3);
+            clients.Clients.Add(model);
+            clients.Clients.Add(model2);
             clients.Clients.Add(model);
             clients.Clients.Add(model);
+            clients.Clients.Add(model2);
+            clients.Clients.Add(model4);
+            clients.Clients.Add(model3);
+            clients.Clients.Add(model);
+            clients.Clients.Add(model2);
             clients.Clients.Add(model);
             clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
-            clients.Clients.Add(model);
+            clients.Clients.Add(model3);
+            clients.Clients.Add(model4);
+            clients.Clients.Add(model2);
+            clients.Clients.Add(model4);
+            clients.Clients.Add(model3);
+            clients.Clients.Add(model2);
             return Json(clients);
         }
 
@@ -69,7 +97,7 @@ namespace RetentionUnit.Controllers
         {
             var client = new Client
             {
-                BirthDate = DateTime.Now,
+                BirthDate = DateTime.Now.ToString("d"),
                 BirthPlace = "МОСКВА",
                 Ibso = ibsoid,
                 FullName = "Тестов Тест Тестович",
